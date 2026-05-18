@@ -912,10 +912,7 @@ function showResult() {
   const jewelryHtml = series.items.map(item => `
     <a class="jewelry-card" href="https://www.briellehouse.com.tw/collections/summer" target="_blank">
       <div class="jewelry-img-wrap">
-        <div class="jewelry-placeholder" style="background: linear-gradient(135deg, ${item.color}33 0%, ${item.color}88 100%)">
-          <div class="gem">${item.emoji}</div>
-          <div class="p-series">${item.code}</div>
-        </div>
+        <img src="./image/${item.code}/01.png" alt="${item.name}" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=\'jewelry-placeholder\' style=\'background: linear-gradient(135deg, ${item.color}33 0%, ${item.color}88 100%)\'>圖片載入失敗</div>'" />
       </div>
       <div class="jewelry-info">
         <div class="jewelry-series">${data.group} Series · ${item.type}</div>
