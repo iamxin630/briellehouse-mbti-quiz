@@ -73,7 +73,6 @@
     font-size: 11px;
     letter-spacing: 0.3em;
     color: var(--stone);
-    text-transform: uppercase;
     margin-bottom: 32px;
   }
 
@@ -900,7 +899,7 @@ function showResult() {
 
   // Jewelry cards
   const jewelryHtml = series.items.map(item => `
-    <a class="jewelry-card" href="https://www.briellehouse.com.tw/collections/summer" target="_blank">
+    <a class="jewelry-card" href="https://www.briellehouse.com.tw/products/${item.code.toLowerCase()}" target="_blank">
       <div class="jewelry-img-wrap">
         <img src="./image/${item.code}/01.png" alt="${item.name}" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=\'jewelry-placeholder\' style=\'background: linear-gradient(135deg, ${item.color}33 0%, ${item.color}88 100%)\'>圖片載入失敗</div>'" />
       </div>
