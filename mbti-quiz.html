@@ -107,8 +107,8 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background: var(--espresso);
-    color: var(--cream);
+    background: linear-gradient(90deg, #a35e5e, #C49A93);
+    color: #fdf8f5;
     border: none;
     padding: 16px 40px;
     font-family: 'DM Sans', sans-serif;
@@ -116,20 +116,10 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
+    transition: filter 0.3s ease;
   }
-  .start-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--gold);
-    transform: translateX(-100%);
-    transition: transform 0.4s ease;
-  }
-  .start-btn:hover::before { transform: translateX(0); }
-  .start-btn span { position: relative; z-index: 1; }
+  .start-btn:hover { filter: brightness(0.92); }
+  .start-btn span { position: relative; }
 
   .ornament {
     display: flex;
@@ -473,7 +463,7 @@
   .cta-section {
     text-align: center;
     padding: 48px;
-    background: var(--espresso);
+    background: #a35e5e;
     margin: 0 -0px;
     position: relative;
     overflow: hidden;
@@ -485,7 +475,7 @@
     top: -50%; left: -20%;
     width: 60%;
     height: 200%;
-    background: radial-gradient(ellipse, rgba(176,112,112,0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(253,248,245,0.1) 0%, transparent 70%);
   }
 
   .cta-text {
@@ -501,7 +491,7 @@
   .cta-sub {
     font-size: 12px;
     letter-spacing: 0.2em;
-    color: var(--stone);
+    color: rgba(253,248,245,0.6);
     text-transform: uppercase;
     margin-bottom: 32px;
     position: relative;
@@ -510,8 +500,8 @@
   .cta-btn {
     display: inline-block;
     padding: 14px 36px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+    border: 1px solid #fdf8f5;
+    color: #fdf8f5;
     text-decoration: none;
     font-size: 12px;
     letter-spacing: 0.2em;
@@ -524,16 +514,16 @@
     background: transparent;
   }
   .cta-btn:hover {
-    background: var(--gold);
-    color: var(--espresso);
+    background: #fdf8f5;
+    color: #a35e5e;
   }
   .cta-btn.secondary {
-    border-color: var(--stone);
-    color: var(--stone);
+    border-color: rgba(253,248,245,0.45);
+    color: rgba(253,248,245,0.65);
   }
   .cta-btn.secondary:hover {
-    background: var(--stone);
-    color: var(--cream);
+    background: rgba(253,248,245,0.15);
+    color: #fdf8f5;
   }
 
   /* Traits bar */
