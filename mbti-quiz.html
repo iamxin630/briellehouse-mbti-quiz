@@ -888,7 +888,9 @@ function showResult() {
     const total = (answers[d.a] || 0) + (answers[d.b] || 0);
     const rawPct = total > 0 ? Math.round((answers[d.b] / total) * 100) : 50;
     const bWins = answers[d.b] >= answers[d.a];
-    let pct = bWins ? Math.max(rawPct, 58) : Math.min(rawPct, 42);
+    let pct = (rawPct !== 50)
+      ? (bWins ? Math.max(rawPct, 60) : Math.min(rawPct, 40))
+      : 50;
     pct = Math.min(Math.max(pct, 15), 85);
     return `
       <div class="trait-item">
